@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Vue Js Cdn  -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Vue Js If else condition</title>
+    
+  </head>
+  <body>
+    <div id="app">
+     <h1 v-if="name">Minhajul</h1>
+     <h1 v-else="name">Abedin</h1>
+     <h1 v-if="age">24</h1>
+     <button @click="showname">Show Name | {{name}}</button>
+     <button @click="showage">Show Age | {{age}}</button>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script>
+      let myapp = new Vue({
+        el: "#app",
+        data: {
+        name:true,
+        age:true,
+        },
+
+        methods:{
+        showname(e){
+          this.name = !this.name
+        },
+        showage(e){
+          this.age = !this.age
+        }
+        },
+      });
+      
+    </script>
+  </body>
+</html>

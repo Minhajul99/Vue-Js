@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Vue Js Cdn  -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Vue Js Methods</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>{{Mymethod ()}}</h1>
+      <h1>{{Myname ()}}</h1>
+      <h1>{{Myage (20)}}</h1>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script>
+      let myapp = new Vue({
+        el: "#app",
+        data: {
+          name: "Minhajul Abedin",
+        },
+        methods: {
+          Mymethod(){
+            return 'Method Learning in Vue'
+          },
+          Myname(){
+            return  `${this.name}`//For using data property in method
+          },
+          Myage(age){
+            return `My Age is ${age}` //For passing Parameter
+          }
+        },
+      });
+    </script>
+  </body>
+</html>
